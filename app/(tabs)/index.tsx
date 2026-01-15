@@ -1,4 +1,3 @@
-// import { View, Text, FlatList, StyleSheet, TextInput } from "react-native";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { View, Text, FlatList, StyleSheet, TextInput, ActivityIndicator } from "react-native";
@@ -11,12 +10,10 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
 
 
-  // Fetch posts
   useEffect(() => {
     fetchPosts();
   }, []);
 
-  // Load saved search text once
   useEffect(() => {
     const loadSavedSearch = async () => {
       try {
@@ -32,7 +29,6 @@ export default function HomeScreen() {
     loadSavedSearch();
   }, []);
 
-  // Filter posts whenever posts or searchText changes
   useEffect(() => {
     if (searchText === "") {
       setFilteredPosts(posts);
@@ -138,7 +134,6 @@ const styles = StyleSheet.create({
   fontSize: 16,
   marginBottom: 16,
 
-  // subtle shadow (works on web & android)
   shadowColor: "#000",
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.1,
