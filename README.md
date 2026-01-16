@@ -5,7 +5,6 @@
 - Display posts using FlatList
 - Search posts by title (instant filtering)
 - Persist search using AsyncStorage
-- Skeleton loader while fetching data
 - Clean and modern UI
 
 ## Tech Stack
